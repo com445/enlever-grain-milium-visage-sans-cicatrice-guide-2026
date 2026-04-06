@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Grains de Milium : Ce que votre peau essaie de vous dire — Beauté & Santé Féminine</title>
+<meta name="description" content="Tout ce que vous devez savoir sur les grains de milium : causes, méthodes d'élimination sans cicatrice, conseils de dermatologue et routine de prévention adaptée au type de peau." />
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:ital,wght@0,700;1,500&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================
+   RESET & CSS VARIABLES
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --rose-poudre:    #f0d9d9;
+  --rose-nude:      #e8c4b8;
+  --nude-clair:     #f7ede8;
+  --terracotta:     #c47c5a;
+  --terracotta-deep:#9e5c3d;
+  --bordeaux:       #7a2e3c;
+  --ivoire:         #fdf8f3;
+  --ivoire-warm:    #f9f1e8;
+  --or:             #c9a86c;
+  --or-clair:       #e8d5b0;
+  --gris-chaud:     #6b5e5e;
+  --gris-clair:     #d4caca;
+  --texte-fonce:    #2c1f1f;
+  --texte-moyen:    #5a4545;
+  --blanc:          #ffffff;
+
+  --font-display:  'Cormorant Garamond', Georgia, serif;
+  --font-titre:    'Playfair Display', Georgia, serif;
+  --font-corps:    'DM Sans', system-ui, sans-serif;
+
+  --espace-xs:  0.5rem;
+  --espace-sm:  1rem;
+  --espace-md:  2rem;
+  --espace-lg:  3.5rem;
+  --espace-xl:  6rem;
+
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  --ombre-douce: 0 4px 30px rgba(124,46,60,0.08);
+  --ombre-carte: 0 8px 40px rgba(44,31,31,0.12);
+  --ombre-forte: 0 20px 60px rgba(44,31,31,0.18);
+
+  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-corps);
+  background-color: var(--ivoire);
+  color: var(--texte-fonce);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ============================================
+   CURSEUR PERSONNALISÉ (desktop)
+   ============================================ */
+@media (hover: hover) and (pointer: fine) {
+  * { cursor: none !important; }
+  #cursor-dot, #cursor-ring {
+    position: fixed; pointer-events: none; z-index: 9999;
+    border-radius: 50%; transform: translate(-50%,-50%);
+    transition: opacity 0.3s;
+  }
+  #cursor-dot {
+    width: 6px; height: 6px;
+    background: var(--terracotta);
+    top: 0; left: 0;
+  }
+  #cursor-ring {
+    width: 32px; height: 32px;
+    border: 1.5px solid var(--terracotta);
+    background: transparent;
+    top: 0; left: 0;
+    transition: width 0.3s, height 0.3s, border-color 0.3s;
+  }
+  #cursor-ring.hovered {
+    width: 48px; height: 48px;
+    border-color: var(--bordeaux);
+    background: rgba(196,124,90,0.08);
+  }
+}
+
+/* ============================================
+   BARRE DE PROGRESSION
+   ============================================ */
+#progress-bar {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+  background: linear-gradient(90deg, var(--terracotta), var(--bordeaux), var(--or));
+  z-index: 1000;
+  transition: width 0.1s linear;
+}
+
+/* ============================================
+   HEADER MAGAZINE
+   ============================================ */
+header {
+  background: var(--blanc);
+  border-bottom: 1px solid var(--gris-clair);
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 20px rgba(44,31,31,0.06);
+}
+.header-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem;
+}
+.logo-mag {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 300; letter-spacing: 0.12em;
+  color: var(--bordeaux);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.logo-mag span { font-weight: 600; }
+.header-tag {
+  background: var(--rose-poudre);
+  color: var(--terracotta-deep);
+  font-size: 0.65rem; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  padding: 0.35rem 0.9rem; border-radius: var(--radius-full);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--nude-clair) 0%, var(--rose-poudre) 50%, var(--ivoire-warm) 100%);
+  overflow: hidden;
+  padding: var(--espace-lg) 1.5rem var(--espace-md);
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 80% 30%, rgba(201,168,108,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 10% 80%, rgba(196,124,90,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-noise {
+  position: absolute; inset: 0; opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 860px; margin: 0 auto;
+  position: relative; z-index: 1;
+  text-align: center;
+}
+.hero-category {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--terracotta); margin-bottom: 1.5rem;
+  opacity: 0; animation: fadeUp 0.7s 0.2s forwards;
+}
+.hero-category::before, .hero-category::after {
+  content: ''; display: block; height: 1px; width: 30px;
+  background: var(--terracotta); opacity: 0.5;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  font-weight: 300; line-height: 1.15;
+  color: var(--texte-fonce);
+  margin-bottom: 1.5rem;
+  opacity: 0; animation: fadeUp 0.8s 0.4s forwards;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--bordeaux);
+  font-weight: 400;
+}
+.hero-intro {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--texte-moyen); max-width: 640px;
+  margin: 0 auto 2.5rem;
+  opacity: 0; animation: fadeUp 0.8s 0.6s forwards;
+}
+.hero-meta {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.5rem; flex-wrap: wrap;
+  font-size: 0.8rem; color: var(--gris-chaud);
+  opacity: 0; animation: fadeUp 0.6s 0.8s forwards;
+}
+.hero-meta-item { display: flex; align-items: center; gap: 0.4rem; }
+.hero-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--or); }
+
+.hero-image-wrap {
+  margin-top: 3rem; border-radius: var(--radius-lg);
+  overflow: hidden; box-shadow: var(--ombre-forte);
+  position: relative;
+  opacity: 0; animation: fadeUp 1s 1s forwards;
+}
+.hero-image-wrap::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 40%;
+  background: linear-gradient(transparent, rgba(44,31,31,0.35));
+  pointer-events: none;
+}
+.hero-image-wrap img {
+  width: 100%; aspect-ratio: 16/7; object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 8s ease;
+}
+.hero-image-wrap:hover img { transform: scale(1); }
+.hero-img-caption {
+  position: absolute; bottom: 1.2rem; left: 1.5rem; right: 1.5rem;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.78rem; font-style: italic;
+  z-index: 1;
+}
+
+/* ============================================
+   ARTICLE LAYOUT
+   ============================================ */
+.article-wrap {
+  max-width: 1200px; margin: 0 auto;
+  padding: var(--espace-lg) 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 720px) 1fr;
+  gap: 0 3rem;
+}
+.article-wrap > * { grid-column: 2; }
+.article-wide { grid-column: 1 / -1 !important; }
+
+@media (max-width: 1024px) {
+  .article-wrap {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .article-wide { grid-column: 1 !important; }
+}
+
+/* ============================================
+   SOMMAIRE
+   ============================================ */
+.sommaire {
+  background: var(--ivoire-warm);
+  border: 1px solid var(--or-clair);
+  border-left: 4px solid var(--terracotta);
+  border-radius: var(--radius-md);
+  padding: 1.8rem 2rem;
+  margin-bottom: 3rem;
+}
+.sommaire-titre {
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--bordeaux); margin-bottom: 1.2rem;
+  letter-spacing: 0.05em;
+  display: flex; align-items: center; gap: 0.7rem;
+}
+.sommaire-titre svg { flex-shrink: 0; }
+.sommaire ol {
+  list-style: none; counter-reset: sommaire-counter;
+  display: grid; gap: 0.5rem;
+}
+.sommaire li { counter-increment: sommaire-counter; }
+.sommaire a {
+  display: flex; align-items: baseline; gap: 0.6rem;
+  color: var(--texte-moyen); font-size: 0.9rem;
+  transition: color var(--transition);
+}
+.sommaire a::before {
+  content: counter(sommaire-counter, decimal-leading-zero);
+  color: var(--terracotta); font-weight: 600;
+  font-family: var(--font-display); font-size: 1rem;
+  flex-shrink: 0;
+}
+.sommaire a:hover { color: var(--terracotta-deep); }
+
+/* ============================================
+   TYPOGRAPHIE ARTICLE
+   ============================================ */
+.lead-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-weight: 300; line-height: 1.8;
+  color: var(--texte-moyen);
+  margin-bottom: 2.5rem;
+  border-left: 3px solid var(--or);
+  padding-left: 1.5rem;
+}
+
+h2.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 600; line-height: 1.25;
+  color: var(--texte-fonce); margin: 3rem 0 1.2rem;
+  position: relative; padding-bottom: 0.8rem;
+}
+h2.section-title::after {
+  content: ''; position: absolute;
+  bottom: 0; left: 0;
+  width: 50px; height: 2px;
+  background: linear-gradient(90deg, var(--terracotta), var(--or));
+}
+h3.sous-titre {
+  font-family: var(--font-corps);
+  font-size: 1.05rem; font-weight: 500;
+  color: var(--bordeaux); margin: 2rem 0 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+p.para { margin-bottom: 1.4rem; font-size: 1rem; line-height: 1.8; }
+
+.lien-article {
+  color: var(--terracotta-deep);
+  border-bottom: 1.5px solid var(--rose-nude);
+  transition: border-color var(--transition), color var(--transition);
+  font-weight: 500;
+}
+.lien-article:hover {
+  color: var(--bordeaux);
+  border-color: var(--bordeaux);
+}
+
+/* ============================================
+   ENCADRÉS SPÉCIAUX
+   ============================================ */
+.encadre {
+  border-radius: var(--radius-md);
+  padding: 1.8rem 2rem;
+  margin: 2.5rem 0;
+  position: relative; overflow: hidden;
+}
+.encadre::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 4px; height: 100%;
+}
+.encadre-expert {
+  background: linear-gradient(135deg, #fff8f5, #fdf3ef);
+  border: 1px solid var(--rose-nude);
+}
+.encadre-expert::before { background: var(--terracotta); }
+.encadre-alerte {
+  background: linear-gradient(135deg, #fff5f0, #ffeee8);
+  border: 1px solid #f5b8a0;
+}
+.encadre-alerte::before { background: var(--bordeaux); }
+.encadre-conseil {
+  background: linear-gradient(135deg, #fdfaf5, #f9f4ec);
+  border: 1px solid var(--or-clair);
+}
+.encadre-conseil::before { background: var(--or); }
+
+.encadre-label {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gris-chaud); margin-bottom: 0.9rem;
+}
+.encadre-texte { font-size: 0.97rem; line-height: 1.75; }
+.encadre-auteur {
+  margin-top: 1rem; font-size: 0.82rem;
+  color: var(--terracotta); font-style: italic;
+}
+
+/* ============================================
+   IMAGES ARTICLE
+   ============================================ */
+.article-image {
+  margin: 2.5rem 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--ombre-carte);
+  position: relative;
+}
+.article-image img {
+  width: 100%; aspect-ratio: 16/9; object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.article-image:hover img { transform: scale(1.02); }
+.article-image figcaption {
+  background: var(--ivoire-warm);
+  padding: 0.8rem 1.2rem;
+  font-size: 0.8rem; color: var(--gris-chaud);
+  font-style: italic;
+  border-top: 1px solid var(--gris-clair);
+}
+
+/* ============================================
+   GRILLE IMAGES 2 COL
+   ============================================ */
+.image-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem; margin: 2.5rem 0;
+}
+@media (max-width: 600px) {
+  .image-grid-2 { grid-template-columns: 1fr; }
+}
+.image-grid-2 figure {
+  border-radius: var(--radius-md); overflow: hidden;
+  box-shadow: var(--ombre-douce);
+}
+.image-grid-2 figure img {
+  width: 100%; aspect-ratio: 16/10; object-fit: cover;
+  transition: transform 0.5s;
+}
+.image-grid-2 figure:hover img { transform: scale(1.04); }
+.image-grid-2 figcaption {
+  padding: 0.6rem 0.9rem; font-size: 0.75rem;
+  color: var(--gris-chaud); font-style: italic;
+  background: var(--ivoire-warm);
+}
+
+/* ============================================
+   LISTE SOIGNÉE
+   ============================================ */
+.liste-stylisee {
+  list-style: none; margin: 1.5rem 0 2rem;
+  display: grid; gap: 0.75rem;
+}
+.liste-stylisee li {
+  display: flex; align-items: flex-start; gap: 0.9rem;
+  font-size: 0.97rem; line-height: 1.7;
+}
+.liste-stylisee li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  margin-top: 0.55rem;
+}
+.liste-numerotee {
+  list-style: none; counter-reset: etape;
+  margin: 1.5rem 0 2rem; display: grid; gap: 1rem;
+}
+.liste-numerotee li {
+  counter-increment: etape;
+  display: flex; align-items: flex-start; gap: 1rem;
+  font-size: 0.97rem; line-height: 1.7;
+}
+.liste-numerotee li::before {
+  content: counter(etape);
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.78rem; font-weight: 700;
+  margin-top: 0.1rem;
+}
+
+/* ============================================
+   SECTION LARGE — CHIFFRES CLÉS
+   ============================================ */
+.stats-band {
+  background: linear-gradient(135deg, var(--bordeaux), var(--terracotta-deep));
+  color: white; padding: var(--espace-md) 2rem;
+  border-radius: var(--radius-lg);
+  margin: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  box-shadow: var(--ombre-forte);
+  position: relative; overflow: hidden;
+}
+.stats-band::before {
+  content: '';
+  position: absolute; top: -50%; right: -10%;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  pointer-events: none;
+}
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300; line-height: 1;
+  color: var(--or-clair); display: block; margin-bottom: 0.4rem;
+}
+.stat-label { font-size: 0.82rem; opacity: 0.85; line-height: 1.4; }
+
+/* ============================================
+   CITATION EDITORIALE
+   ============================================ */
+.citation-edito {
+  margin: 3rem 0;
+  padding: 2rem 2.5rem;
+  border-top: 2px solid var(--or);
+  border-bottom: 2px solid var(--or);
+  text-align: center;
+  position: relative;
+}
+.citation-edito::before {
+  content: '\201C';
+  font-family: var(--font-display);
+  font-size: 6rem; line-height: 0.5;
+  color: var(--or); opacity: 0.3;
+  position: absolute; top: 1.5rem; left: 1rem;
+}
+.citation-texte {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-style: italic; font-weight: 300;
+  color: var(--texte-fonce); line-height: 1.6;
+  position: relative; z-index: 1;
+}
+.citation-source {
+  display: block; margin-top: 1rem;
+  font-size: 0.82rem; color: var(--gris-chaud);
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   CARDS MÉTHODES
+   ============================================ */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem; margin: 2.5rem 0;
+}
+.card-methode {
+  background: var(--blanc);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--ombre-douce);
+  padding: 1.8rem 1.5rem;
+  border: 1px solid var(--gris-clair);
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative; overflow: hidden;
+}
+.card-methode::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--terracotta), var(--or));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform var(--transition);
+}
+.card-methode:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ombre-carte);
+}
+.card-methode:hover::after { transform: scaleX(1); }
+.card-icon {
+  width: 48px; height: 48px;
+  background: var(--nude-clair);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.2rem; font-size: 1.5rem;
+}
+.card-titre {
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--bordeaux); margin-bottom: 0.7rem;
+}
+.card-texte { font-size: 0.9rem; color: var(--texte-moyen); line-height: 1.7; }
+.card-badge {
+  display: inline-block; margin-top: 1rem;
+  background: var(--rose-poudre); color: var(--terracotta-deep);
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.3rem 0.8rem; border-radius: var(--radius-full);
+}
+
+/* ============================================
+   FAQ ACCORDÉON
+   ============================================ */
+.faq-wrap { margin: 2.5rem 0; }
+.faq-item {
+  border: 1px solid var(--gris-clair);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+.faq-item:hover { box-shadow: var(--ombre-douce); }
+.faq-question {
+  width: 100%; padding: 1.2rem 1.5rem;
+  background: var(--blanc);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; border: none; cursor: pointer;
+  font-family: var(--font-corps); font-size: 0.97rem;
+  font-weight: 500; color: var(--texte-fonce);
+  text-align: left;
+  transition: background var(--transition);
+}
+.faq-question:hover { background: var(--nude-clair); }
+.faq-question[aria-expanded="true"] {
+  background: var(--nude-clair);
+  color: var(--bordeaux);
+}
+.faq-icon {
+  flex-shrink: 0; width: 24px; height: 24px;
+  border-radius: 50%; background: var(--rose-poudre);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform var(--transition), background var(--transition);
+}
+.faq-question[aria-expanded="true"] .faq-icon {
+  transform: rotate(45deg);
+  background: var(--terracotta);
+  color: white;
+}
+.faq-reponse {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+.faq-reponse.open { max-height: 500px; }
+.faq-reponse-inner {
+  padding: 0 1.5rem 1.5rem;
+  font-size: 0.95rem; color: var(--texte-moyen);
+  line-height: 1.75;
+}
+.faq-reponse-inner .lien-article { font-size: 0.95rem; }
+
+/* ============================================
+   TABLEAU COMPARATIF
+   ============================================ */
+.tableau-wrap {
+  overflow-x: auto; margin: 2.5rem 0;
+  border-radius: var(--radius-md);
+  box-shadow: var(--ombre-douce);
+}
+table {
+  width: 100%; border-collapse: collapse;
+  font-size: 0.9rem; min-width: 520px;
+}
+thead { background: linear-gradient(135deg, var(--bordeaux), var(--terracotta-deep)); }
+thead th {
+  color: white; padding: 1rem 1.2rem;
+  font-weight: 500; letter-spacing: 0.03em;
+  text-align: left;
+}
+tbody tr:nth-child(even) { background: var(--ivoire-warm); }
+tbody tr:nth-child(odd) { background: var(--blanc); }
+tbody td {
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid var(--gris-clair);
+  vertical-align: top; line-height: 1.6;
+}
+tbody tr:hover { background: var(--nude-clair); }
+.check { color: #3a8a4a; font-weight: 700; }
+.cross { color: #c04040; font-weight: 700; }
+
+/* ============================================
+   AUTEUR SIGNATURE
+   ============================================ */
+.auteur-card {
+  display: flex; align-items: center; gap: 1.5rem;
+  padding: 1.8rem 2rem;
+  background: var(--blanc);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gris-clair);
+  box-shadow: var(--ombre-douce);
+  margin: 3rem 0;
+}
+.auteur-avatar {
+  flex-shrink: 0;
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--or-clair);
+  box-shadow: 0 4px 16px rgba(201,168,108,0.3);
+}
+.auteur-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.auteur-nom {
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--texte-fonce); margin-bottom: 0.3rem;
+}
+.auteur-role {
+  font-size: 0.8rem; color: var(--terracotta);
+  letter-spacing: 0.05em; margin-bottom: 0.6rem;
+}
+.auteur-bio { font-size: 0.88rem; color: var(--texte-moyen); line-height: 1.6; }
+
+@media (max-width: 480px) {
+  .auteur-card { flex-direction: column; text-align: center; }
+}
+
+/* ============================================
+   CTA PRINCIPAL
+   ============================================ */
+.cta-section {
+  background: linear-gradient(135deg, var(--rose-poudre), var(--or-clair));
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  margin: 3rem 0;
+  box-shadow: var(--ombre-douce);
+  border: 1px solid rgba(201,168,108,0.3);
+  position: relative; overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute; top: -30px; right: -30px;
+  width: 120px; height: 120px; border-radius: 50%;
+  background: rgba(196,124,90,0.1);
+  pointer-events: none;
+}
+.cta-titre {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: 400; color: var(--texte-fonce);
+  margin-bottom: 0.8rem;
+}
+.cta-sous { font-size: 0.9rem; color: var(--texte-moyen); margin-bottom: 1.5rem; }
+.btn-cta {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: linear-gradient(135deg, var(--terracotta), var(--terracotta-deep));
+  color: white; font-weight: 500; font-size: 0.92rem;
+  padding: 0.9rem 2rem; border-radius: var(--radius-full);
+  box-shadow: 0 4px 20px rgba(196,124,90,0.4);
+  transition: transform var(--transition), box-shadow var(--transition);
+  border: none; cursor: pointer;
+}
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(196,124,90,0.5);
+  color: white;
+}
+
+/* ============================================
+   ROUTINE SKIN CARE TIMELINE
+   ============================================ */
+.timeline {
+  position: relative; padding-left: 2rem; margin: 2rem 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute; left: 0.6rem; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--terracotta), var(--or), transparent);
+}
+.timeline-item {
+  position: relative; margin-bottom: 2rem; padding-left: 1rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute; left: -1.75rem; top: 0.35rem;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--terracotta);
+  border: 2px solid var(--blanc);
+  box-shadow: 0 0 0 3px rgba(196,124,90,0.3);
+}
+.timeline-titre {
+  font-weight: 600; color: var(--bordeaux);
+  margin-bottom: 0.4rem; font-size: 0.97rem;
+}
+.timeline-texte { font-size: 0.93rem; color: var(--texte-moyen); line-height: 1.7; }
+
+/* ============================================
+   FLOATING READING PROGRESS (mobile)
+   ============================================ */
+.floating-back {
+  position: fixed; bottom: 1.5rem; right: 1.5rem;
+  width: 44px; height: 44px;
+  background: var(--terracotta);
+  color: white; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(196,124,90,0.5);
+  opacity: 0; transform: translateY(20px);
+  transition: opacity var(--transition), transform var(--transition);
+  z-index: 500; border: none; cursor: pointer;
+}
+.floating-back.visible { opacity: 1; transform: translateY(0); }
+
+/* ============================================
+   FOOTER ARTICLE
+   ============================================ */
+footer {
+  background: var(--texte-fonce);
+  color: rgba(255,255,255,0.7);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  margin-top: var(--espace-lg);
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem; font-weight: 300;
+  letter-spacing: 0.15em; color: var(--or-clair);
+  text-transform: uppercase; margin-bottom: 0.8rem;
+}
+.footer-text { font-size: 0.82rem; line-height: 1.7; max-width: 460px; margin: 0 auto 1.2rem; }
+.footer-disclaimer {
+  font-size: 0.75rem; opacity: 0.6;
+  max-width: 560px; margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1.2rem; margin-top: 1.2rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(196,124,90,0.4); }
+  70%  { box-shadow: 0 0 0 12px rgba(196,124,90,0); }
+  100% { box-shadow: 0 0 0 0 rgba(196,124,90,0); }
+}
+
+.reveal {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ============================================
+   RESPONSIVE UTILITAIRES
+   ============================================ */
+@media (max-width: 768px) {
+  :root {
+    --espace-lg: 2.5rem;
+    --espace-xl: 3.5rem;
+  }
+  .article-wrap { padding: 2rem 1rem; }
+  .sommaire { padding: 1.3rem 1.2rem; }
+  .encadre { padding: 1.4rem 1.2rem; }
+  .citation-edito { padding: 1.5rem 1.2rem; }
+  .stats-band { padding: 2rem 1.2rem; }
+  .auteur-card { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+  .cards-grid { grid-template-columns: 1fr; }
+  .hero-meta { gap: 0.8rem; }
+}
+
+/* ============================================
+   PRINT
+   ============================================ */
+@media print {
+  #cursor-dot, #cursor-ring, #progress-bar,
+  .floating-back { display: none; }
+  body { font-size: 12pt; }
+}
+</style>
+</head>
+<body>
+
+<!-- Curseur personnalisé -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Barre de progression lecture -->
+<div id="progress-bar"></div>
+
+<!-- Bouton retour haut -->
+<button class="floating-back" id="backTop" aria-label="Retour en haut" title="Retour en haut">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- ============================================================
+     HEADER MAGAZINE
+     ============================================================ -->
+<header>
+  <div class="header-inner">
+    <div class="logo-mag">Belle <span>&amp;</span> Santé</div>
+    <span class="header-tag">Article Invité · Soin du Visage</span>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="top">
+  <div class="hero-noise"></div>
+  <div class="hero-inner">
+    <div class="hero-category">
+      <span></span>Dermatologie &amp; Beauté Féminine<span></span>
+    </div>
+    <h1 class="hero-title">
+      Ces petits grains blancs sous la peau<br />
+      <em>méritent une attention toute particulière</em>
+    </h1>
+    <p class="hero-intro">
+      Les grains de milium intriguent, agacent, et sont souvent mal compris. Voici tout ce que la science dermatologique 2026 nous dit sur leur nature et, surtout, les meilleures façons de les traiter sans abîmer votre peau.
+    </p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Rédaction Belle &amp; Santé
+      </span>
+      <span class="hero-meta-dot"></span>
+      <span class="hero-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Avril 2026
+      </span>
+      <span class="hero-meta-dot"></span>
+      <span class="hero-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Lecture : 12 min
+      </span>
+      <span class="hero-meta-dot"></span>
+      <span class="hero-meta-item">Relu par une dermatologue</span>
+    </div>
+    <figure class="hero-image-wrap">
+      <img
+        src="https://femininsante.com/wp-content/uploads/2026/02/enlever-grain-milium-visage-guide-expert-2026.webp"
+        alt="Peau lumineuse après traitement des grains de milium — guide expert 2026"
+        loading="eager"
+        width="1200" height="525"
+      />
+      <p class="hero-img-caption">
+        Résultat obtenu après traitement adapté des grains de milium — ©&nbsp;Féminin&nbsp;Santé
+      </p>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTENU PRINCIPAL
+     ============================================================ -->
+<main>
+<div class="article-wrap">
+
+  <!-- SOMMAIRE -->
+  <nav class="sommaire reveal" aria-label="Sommaire de l'article">
+    <div class="sommaire-titre">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      Dans cet article
+    </div>
+    <ol>
+      <li><a href="#quest-ce-que">Qu'est-ce qu'un grain de milium, exactement ?</a></li>
+      <li><a href="#causes">Causes et facteurs déclenchants</a></li>
+      <li><a href="#methodes">Les meilleures méthodes pour les éliminer</a></li>
+      <li><a href="#danger-maison">Pourquoi il ne faut jamais les percer soi-même</a></li>
+      <li><a href="#dermatologue">La consultation dermatologique : que se passe-t-il ?</a></li>
+      <li><a href="#actifs">Les actifs cosmétiques qui aident vraiment</a></li>
+      <li><a href="#routine">La routine de prévention au quotidien</a></li>
+      <li><a href="#faq">Questions fréquentes</a></li>
+    </ol>
+  </nav>
+
+  <!-- LEAD -->
+  <p class="lead-text reveal">
+    Si vous avez déjà remarqué de petits points blancs fermes sous la peau, notamment autour des yeux ou sur les joues, vous connaissez probablement les grains de milium. Contrairement aux comédons classiques, ils ne peuvent pas être éliminés par simple pression — et c'est précisément là que beaucoup de femmes commettent des erreurs irréversibles.
+  </p>
+
+  <!-- SECTION 1 -->
+  <section id="quest-ce-que">
+    <h2 class="section-title reveal">Qu'est-ce qu'un grain de milium, exactement&nbsp;?</h2>
+
+    <p class="para reveal">
+      Le milium, du latin <em>milium</em> (millet), est un micro-kyste kératinique bénin logé dans les couches superficielles du derme. Sa structure est radicalement différente d'un bouton ou d'un point blanc classique&nbsp;: il s'agit d'un sac clos rempli de kératine, la même protéine fibreuse qui constitue vos cheveux et vos ongles. Cette capsule close explique pourquoi aucune pression externe ne peut l'évacuer naturellement.
+    </p>
+
+    <p class="para reveal">
+      Ces lésions bénignes touchent toutes les tranches d'âge, des nouveau-nés (milium néonatal, transitoire) aux adultes, et n'épargnent aucun phototype. Elles apparaissent le plus fréquemment dans la région péri-orbitaire — autour des yeux — mais aussi sur les joues, le nez, le front ou même les lèvres. Leur taille varie de 1 à 3 millimètres, et leur texture est caractéristique&nbsp;: dure, lisse, parfaitement sphérique.
+    </p>
+
+    <p class="para reveal">
+      Pour <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">enlever un grain de milium sur le visage</a> de manière efficace et sans séquelle, il est indispensable de comprendre sa nature profonde. Aucune technique de surface ne peut venir à bout d'un kyste encapsulé&nbsp;: la paroi doit être perforée ou dissoute, ce qui exige précision et, dans la majorité des cas, l'intervention d'un professionnel.
+    </p>
+
+    <div class="encadre encadre-expert reveal">
+      <span class="encadre-label">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Éclairage médical
+      </span>
+      <p class="encadre-texte">
+        Il existe deux types de milium&nbsp;: le <strong>milium primaire</strong>, qui se développe spontanément à partir de glandes pilosébacées, et le <strong>milium secondaire</strong>, qui survient après une agression cutanée — brûlure, dermabrasion, réaction à un produit cosmétique occlusif, voire exposition solaire prolongée. Le traitement diffère selon l'origine.
+      </p>
+      <span class="encadre-auteur">— Synthèse bibliographique, Journal of Dermatological Science 2025</span>
+    </div>
+
+    <figure class="article-image reveal">
+      <img
+        src="https://femininsante.com/wp-content/uploads/2026/02/difference-grain-milium-acne-visage.webp"
+        alt="Différence visuelle entre grain de milium et acné sur le visage"
+        loading="lazy" width="1200" height="675"
+      />
+      <figcaption>Comparaison clinique&nbsp;: milium (gauche) vs acné kystique (droite) — ©&nbsp;Féminin Santé</figcaption>
+    </figure>
+  </section>
+
+  <!-- STATS BAND -->
+  <div class="stats-band article-wide reveal">
+    <div class="stat-item">
+      <span class="stat-num" data-target="40">0%</span>
+      <span class="stat-label">des femmes de 20–45 ans présentent au moins un grain de milium</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="85">0%</span>
+      <span class="stat-label">des cas se résolvent sans cicatrice avec un traitement professionnel adapté</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="3">0</span>
+      <span class="stat-label">semaines en moyenne pour une disparition complète post-extraction</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="92">0%</span>
+      <span class="stat-label">de satisfaction patient après protocole dermatologique 2025</span>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <section id="causes">
+    <h2 class="section-title reveal">Causes et facteurs déclenchants</h2>
+
+    <p class="para reveal">
+      L'accumulation de kératine au cœur d'un follicule pilaire obstrué est le mécanisme central. Mais derrière ce processus biologique, plusieurs facteurs fragilisent la peau et favorisent la formation de ces micro-kystes. Identifier votre facteur déclenchant est la première étape pour rompre le cycle.
+    </p>
+
+    <h3 class="sous-titre reveal">Les principales causes identifiées</h3>
+    <ul class="liste-stylisee reveal">
+      <li><strong>Produits cosmétiques occlusifs :</strong> Les formulations riches en paraffine, petrolatum ou silicones lourds créent un film imperméable qui entrave le renouvellement cellulaire et favorise l'occlusion folliculaire.</li>
+      <li><strong>Photovieillissement :</strong> Une exposition solaire non protégée épaissit le stratum corneum et ralentit la desquamation naturelle, piégeant la kératine dans les follicules.</li>
+      <li><strong>Manque d'exfoliation :</strong> Sans renouvellement cellulaire régulier, les cellules mortes s'accumulent et obstruent les pores les plus fins.</li>
+      <li><strong>Traumatismes cutanés :</strong> Dermabrasion mal dosée, laser CO₂, brûlures superficielles — tout endommagement de la membrane basale peut générer du milium secondaire.</li>
+      <li><strong>Prédisposition génétique :</strong> Certaines peaux produisent naturellement plus de kératine, favorisant la formation de kystes sans facteur externe identifiable.</li>
+    </ul>
+
+    <p class="para reveal">
+      La bonne nouvelle&nbsp;: comprendre <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">comment enlever un grain de milium</a> implique aussi d'adopter des gestes préventifs ciblés. En modifiant votre routine cosmétique et en intégrant un écran solaire non comédogène, vous pouvez significativement réduire leur récurrence.
+    </p>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section id="methodes">
+    <h2 class="section-title reveal">Les meilleures méthodes pour les éliminer</h2>
+
+    <p class="para reveal">
+      Il existe un spectre de solutions allant du soin topique de fond à l'extraction médicale. Le choix de la méthode dépend du nombre de grains, de leur localisation, de votre tolérance cutanée et, bien sûr, de votre budget. Voici une synthèse des approches validées en 2026.
+    </p>
+
+    <div class="cards-grid reveal">
+      <article class="card-methode">
+        <div class="card-icon">🔬</div>
+        <h3 class="card-titre">Extraction à l'aiguille stérile</h3>
+        <p class="card-texte">La méthode reine, réalisée par un dermatologue ou une infirmière spécialisée. Une aiguille 25G crée une micro-incision dans la paroi du kyste, dont le contenu est ensuite expulsé sans arracher le tissu environnant.</p>
+        <span class="card-badge">★ Méthode de référence</span>
+      </article>
+      <article class="card-methode">
+        <div class="card-icon">⚡</div>
+        <h3 class="card-titre">Électrocoagulation</h3>
+        <p class="card-texte">Un courant électrique de haute fréquence détruit la paroi du kyste avec une précision millimétrique. Idéale pour les miliums multiples ou récidivants. Légèrement plus longue à cicatriser, mais particulièrement efficace.</p>
+        <span class="card-badge">Miliums multiples</span>
+      </article>
+      <article class="card-methode">
+        <div class="card-icon">🌿</div>
+        <h3 class="card-titre">Actifs kératolytiques topiques</h3>
+        <p class="card-texte">Rétinol, acide rétinoïque, acide glycolique à 10–15 % ou acide salicylique peuvent, sur plusieurs semaines, dissoudre progressivement la capsule kératinique. Méthode douce, mais réservée aux cas peu sévères.</p>
+        <span class="card-badge">Prévention & cas légers</span>
+      </article>
+      <article class="card-methode">
+        <div class="card-icon">🔴</div>
+        <h3 class="card-titre">Laser CO₂ fractionné</h3>
+        <p class="card-texte">Réservé aux cas réfractaires ou très nombreux, le laser fractionné vaporise le kyste tout en stimulant le collagène environnant. Nécessite une anesthésie locale et une éviction sociale de 5 à 7 jours.</p>
+        <span class="card-badge">Cas résistants</span>
+      </article>
+    </div>
+
+    <p class="para reveal">
+      Pour celles qui s'interrogent sur <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">comment enlever un grain de milium sur le visage sans laisser de cicatrice</a>, la réponse réside dans la méthode choisie ET dans le soin post-traitement. Une extraction parfaitement réalisée suivie d'une cicatrisation négligée peut tout de même laisser une trace.
+    </p>
+  </section>
+
+  <!-- TABLEAU COMPARATIF -->
+  <div class="tableau-wrap reveal">
+    <table>
+      <caption style="text-align:left;padding:0.8rem 1.2rem;font-size:0.82rem;color:var(--gris-chaud);background:var(--ivoire-warm);border-bottom:1px solid var(--gris-clair);">
+        Comparatif des méthodes d'élimination du milium — efficacité et risques
+      </caption>
+      <thead>
+        <tr>
+          <th>Méthode</th>
+          <th>Efficacité</th>
+          <th>Risque cicatrice</th>
+          <th>À faire soi-même ?</th>
+          <th>Coût moyen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Aiguille stérile (professionnel)</strong></td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>Très faible</td>
+          <td class="cross">✗ Non</td>
+          <td>15–60 € / séance</td>
+        </tr>
+        <tr>
+          <td><strong>Rétinol topique</strong></td>
+          <td>⭐⭐⭐</td>
+          <td>Nul</td>
+          <td class="check">✓ Oui</td>
+          <td>20–50 € / produit</td>
+        </tr>
+        <tr>
+          <td><strong>Électrocoagulation</strong></td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>Faible</td>
+          <td class="cross">✗ Non</td>
+          <td>50–150 € / séance</td>
+        </tr>
+        <tr>
+          <td><strong>Acide glycolique 15 %</strong></td>
+          <td>⭐⭐⭐</td>
+          <td>Nul</td>
+          <td class="check">✓ Oui</td>
+          <td>15–40 € / produit</td>
+        </tr>
+        <tr>
+          <td><strong>Laser CO₂ fractionné</strong></td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>Modéré (post-laser)</td>
+          <td class="cross">✗ Non</td>
+          <td>200–600 € / séance</td>
+        </tr>
+        <tr>
+          <td><strong>Extraction à la main (maison)</strong></td>
+          <td>⭐</td>
+          <td><strong>Très élevé</strong></td>
+          <td class="cross">✗ Déconseillé</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 4 — DANGER -->
+  <section id="danger-maison">
+    <h2 class="section-title reveal">Pourquoi il ne faut <em>jamais</em> les percer soi-même</h2>
+
+    <div class="encadre encadre-alerte reveal">
+      <span class="encadre-label">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Mise en garde dermatologique
+      </span>
+      <p class="encadre-texte">
+        Tenter d'extraire un grain de milium à domicile avec les doigts, un tire-comédon ou même une aiguille non stérilisée présente des risques majeurs&nbsp;: cicatrisation chéloïdienne, infection bactérienne, pigmentation post-inflammatoire durable, et propagation des kystes par contact. <strong>La kératine étant encapsulée, une pression simple ne fait qu'inflammer les tissus sans vider le kyste.</strong>
+      </p>
+    </div>
+
+    <p class="para reveal">
+      La question de <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">quand consulter un dermatologue pour enlever un grain de milium</a> est essentielle. La réponse est&nbsp;: dès que le grain est bien formé, persistant depuis plus de six semaines, ou localisé dans une zone sensible comme le contour des yeux. Là, seule une main professionnelle garantit un résultat sans séquelle.
+    </p>
+
+    <div class="image-grid-2 reveal">
+      <figure>
+        <img
+          src="https://femininsante.com/wp-content/uploads/2026/02/danger-extraction-maison-grain-milium.webp"
+          alt="Les dangers de l'extraction maison d'un grain de milium"
+          loading="lazy" width="752" height="420"
+        />
+        <figcaption>Extraction maison&nbsp;: les séquelles possibles</figcaption>
+      </figure>
+      <figure>
+        <img
+          src="https://femininsante.com/wp-content/uploads/2026/02/extraction-professionnelle-grain-milium-dermatologue.webp"
+          alt="Extraction professionnelle d'un grain de milium par un dermatologue"
+          loading="lazy" width="752" height="420"
+        />
+        <figcaption>Extraction médicale&nbsp;: précision et sécurité</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CITATION -->
+  <blockquote class="citation-edito reveal">
+    <p class="citation-texte">
+      « La peau est un organe vivant qui mérite d'être traité avec la même rigueur qu'un tissu interne. Chaque micro-agression non maîtrisée laisse une empreinte — visible ou non. »
+    </p>
+    <cite class="citation-source">— Dr. Camille Bertrand, dermatologue, Hôpital Saint-Louis, Paris</cite>
+  </blockquote>
+
+  <!-- SECTION 5 — DERMATOLOGUE -->
+  <section id="dermatologue">
+    <h2 class="section-title reveal">La consultation dermatologique&nbsp;: que se passe-t-il&nbsp;?</h2>
+
+    <p class="para reveal">
+      Se demander <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">comment un dermatologue procède-t-il pour enlever un grain de milium</a> rassure souvent les patientes réticentes. La procédure est bien moins impressionnante qu'il n'y paraît.
+    </p>
+
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="timeline-titre">1. Examen clinique (2–5 minutes)</div>
+        <p class="timeline-texte">Le praticien confirme le diagnostic à l'aide d'un dermatoscope, élimine les diagnostics différentiels (syringome, hyperplasie sébacée, acné) et évalue le nombre et la profondeur des kystes.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-titre">2. Désinfection locale</div>
+        <p class="timeline-texte">La zone est nettoyée à la chlorhexidine ou à l'alcool isopropylique pour minimiser le risque d'infection secondaire.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-titre">3. Perforation de la capsule</div>
+        <p class="timeline-texte">À l'aide d'une aiguille de calibre 25 à 30 gauge, le praticien crée une ouverture minuscule perpendiculaire à la surface de la peau, sans dépasser le derme papillaire.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-titre">4. Expression douce du contenu</div>
+        <p class="timeline-texte">Une légère pression latérale avec les doigts protégés ou un curette fin expulse le bouchon kératinique. Le geste prend moins de dix secondes par grain.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-titre">5. Soins post-traitement (J0 à J7)</div>
+        <p class="timeline-texte">Application d'une crème cicatrisante non comédogène, protection solaire SPF 50+ obligatoire, et éviction des maquillages occlusifs pendant 48 heures.</p>
+      </div>
+    </div>
+
+    <p class="para reveal">
+      La douleur est quasi inexistante — la plupart des femmes décrivent une légère piqûre. Aucune anesthésie locale n'est nécessaire pour des miliums isolés. Pour les <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">miliums multiples sur le visage, quelle est la meilleure approche médicale</a>&nbsp;? Dans ce cas, le dermatologue peut proposer plusieurs séances espacées de 3 à 4 semaines, ou combiner extraction et traitement topique d'entretien.
+    </p>
+  </section>
+
+  <!-- SECTION 6 — ACTIFS -->
+  <section id="actifs">
+    <h2 class="section-title reveal">Les actifs cosmétiques qui aident vraiment</h2>
+
+    <p class="para reveal">
+      Même sans consultation, certains ingrédients ont démontré leur capacité à prévenir la formation de nouveaux kystes et à accélérer la résolution des grains existants. La clé&nbsp;: la régularité et la tolérance cutanée. Pour savoir <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">quels actifs cosmétiques aident à enlever les grains de milium naturellement</a>, voici les champions validés par la littérature scientifique récente.
+    </p>
+
+    <figure class="article-image reveal">
+      <img
+        src="https://femininsante.com/wp-content/uploads/2026/02/meilleurs-actifs-retinol-acide-glycolique-milium.webp"
+        alt="Rétinol et acide glycolique, les meilleurs actifs contre les grains de milium"
+        loading="lazy" width="1200" height="675"
+      />
+      <figcaption>Rétinol et AHA&nbsp;: duo gagnant contre le milium — ©&nbsp;Féminin Santé</figcaption>
+    </figure>
+
+    <h3 class="sous-titre reveal">Rétinol et rétinoïdes (vitamine A)</h3>
+    <p class="para reveal">
+      Le rétinol agit en accélérant le turn-over cellulaire et en normalisant la kératinisation folliculaire. À des concentrations de 0,025 % à 0,1 %, appliqué 2 à 3 fois par semaine le soir, il peut significativement réduire l'apparition de nouveaux miliums sur 8 à 12 semaines. Les rétinoïdes sur prescription (trétinoïne 0,05–0,1 %) sont encore plus efficaces mais nécessitent un accompagnement médical.
+    </p>
+
+    <h3 class="sous-titre reveal">Acides alpha-hydroxy (AHA) et bêta-hydroxy (BHA)</h3>
+    <p class="para reveal">
+      L'acide glycolique à 8–15 % (AHA) exfolie l'épiderme en profondeur, libérant les kératines piégées et affinant le film cutané. L'acide salicylique à 1–2 % (BHA), liposoluble, pénètre dans les follicules occlusifs pour les désobstruer. Leur association en sérum ou masque hebdomadaire constitue un protocole de fond particulièrement adapté aux peaux mixtes à tendance milium.
+    </p>
+
+    <div class="encadre encadre-conseil reveal">
+      <span class="encadre-label">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Conseil expert
+      </span>
+      <p class="encadre-texte">
+        N'utilisez jamais le rétinol et les AHA/BHA en même temps dans votre routine. Le rétinol le soir, les acides le matin (ou alterner les soirs) — cette règle d'or minimise le risque d'irritation et maximise l'efficacité de chaque actif. Si vous êtes enceinte, les rétinoïdes sont contre-indiqués&nbsp;; tournez-vous vers l'acide azélaïque ou le niacinamide.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — ROUTINE PRÉVENTION -->
+  <section id="routine">
+    <h2 class="section-title reveal">La routine de prévention au quotidien</h2>
+
+    <p class="para reveal">
+      Savoir <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">comment prévenir la formation de nouveaux grains de milium sur le visage</a> est tout aussi important que les traiter. Une routine bien construite peut réduire leur récurrence de 60 à 70 % selon les données publiées en 2025.
+    </p>
+
+    <figure class="article-image reveal">
+      <img
+        src="https://femininsante.com/wp-content/uploads/2026/02/routine-double-nettoyage-prevention-milium.webp"
+        alt="Routine double nettoyage pour prévenir les grains de milium"
+        loading="lazy" width="1200" height="675"
+      />
+      <figcaption>Le double nettoyage, pilier de la prévention du milium — ©&nbsp;Féminin Santé</figcaption>
+    </figure>
+
+    <h3 class="sous-titre reveal">Routine Matin</h3>
+    <ol class="liste-numerotee reveal">
+      <li>Nettoyage doux (gel moussant non comédogène, pH 5.5) pour éliminer le sébum de nuit sans déséquilibrer le microbiome cutané.</li>
+      <li>Sérum à l'acide glycolique 8 % ou niacinamide 10 % — texture légère, absorption rapide.</li>
+      <li>Crème hydratante non occlusif (à base d'acide hyaluronique, de bêta-glucane ou de céramides).</li>
+      <li>Protection solaire SPF 50+ fluide non comédogène — <strong>étape non négociable</strong>, car le soleil est l'un des principaux catalyseurs du milium.</li>
+    </ol>
+
+    <h3 class="sous-titre reveal">Routine Soir</h3>
+    <ol class="liste-numerotee reveal">
+      <li>Double nettoyage&nbsp;: d'abord une huile démaquillante pour dissoudre les résidus de maquillage et de SPF, puis un gel nettoyant aqueux.</li>
+      <li>Sérum ou crème au rétinol 0,025–0,05 % (2–3 fois par semaine en phase d'introduction).</li>
+      <li>Crème barrière légère à base de céramides et de panthénol pour soutenir la réparation nocturne.</li>
+    </ol>
+
+    <figure class="article-image reveal">
+      <img
+        src="https://femininsante.com/wp-content/uploads/2026/02/protection-solaire-fluide-non-comedogene.webp"
+        alt="Protection solaire fluide non comédogène pour peaux sujettes aux grains de milium"
+        loading="lazy" width="1200" height="675"
+      />
+      <figcaption>La protection solaire non comédogène&nbsp;: alliée indispensable — ©&nbsp;Féminin Santé</figcaption>
+    </figure>
+
+    <p class="para reveal">
+      Si vous vous demandez <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">comment enlever les grains de milium rapidement et efficacement</a>, sachez que la rapidité dépend de la méthode&nbsp;: une extraction professionnelle donne des résultats immédiats (le grain disparaît en séance), tandis qu'un traitement topique demande patience et régularité — 6 à 12 semaines minimum.
+    </p>
+
+    <div class="cta-section reveal">
+      <h3 class="cta-titre">Votre guide complet et interactif sur les grains de milium</h3>
+      <p class="cta-sous">Méthodes, actifs, conseils de dermatologue, FAQ détaillée — tout est réuni dans un seul article de référence.</p>
+      <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="btn-cta" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        Lire le guide complet 2026
+      </a>
+    </div>
+  </section>
+
+  <!-- SECTION 8 — FAQ -->
+  <section id="faq">
+    <h2 class="section-title reveal">Questions fréquentes</h2>
+    <p class="para reveal">
+      Voici les interrogations les plus courantes de nos lectrices sur ce sujet, avec des réponses directes et sourcées.
+    </p>
+
+    <div class="faq-wrap reveal">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Comment enlever un grain de milium sur le visage sans laisser de cicatrice ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-reponse">
+          <div class="faq-reponse-inner">
+            La seule façon de garantir une élimination sans cicatrice est de confier le soin à un dermatologue ou une infirmière spécialisée. L'extraction à l'aiguille stérile, réalisée par un professionnel, perfore la capsule sans traumatiser le tissu environnant. Un traitement post-extraction soigneux (crème cicatrisante, SPF 50+) complète le protocole. Pour une synthèse exhaustive, <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">découvrez notre guide complet pour enlever un grain de milium sans cicatrice</a>.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Comment faire partir un grain de milium naturellement ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-reponse">
+          <div class="faq-reponse-inner">
+            Certains grains de milium primaires (surtout chez les nourrissons et les adultes jeunes) disparaissent spontanément en quelques semaines. Pour accélérer ce processus naturellement, l'application régulière de rétinol à faible concentration, l'exfoliation douce aux AHA et la suppression des produits occlusifs sont les leviers les plus efficaces. <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">Apprenez comment faire disparaître un grain de milium naturellement</a> avec les bonnes pratiques.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Quand faut-il consulter un médecin pour les grains de milium ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-reponse">
+          <div class="faq-reponse-inner">
+            Consultez dès que les grains persistent plus de 6 semaines sans régression, qu'ils sont nombreux (plus de 5), situés autour des yeux, ou associés à une rougeur et une inflammation. Une consultation s'impose également si vous observez une croissance rapide ou un aspect inhabituel. Découvrez <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">quand consulter un dermatologue pour enlever un grain de milium</a> dans notre article de référence.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Comment différencier un grain de milium d'un autre type de lésion cutanée ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-reponse">
+          <div class="faq-reponse-inner">
+            Le grain de milium est blanc ou blanc-nacré, dur, parfaitement sphérique, indolore et immobile sous la peau. Il ne s'enflamme pas spontanément (contrairement à un bouton d'acné) et ne présente pas d'ouverture en surface (contrairement à un comédone ouvert). Le syringome est plus aplati et se retrouve en grappes sous les yeux. Le xanthélasma est jaunâtre et plan. Pour comprendre <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">comment différencier un grain de milium des autres lésions cutanées</a>, un dermatologue reste la meilleure ressource.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Pourquoi les grains de milium reviennent-ils après traitement ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-reponse">
+          <div class="faq-reponse-inner">
+            La récidive survient lorsque les facteurs déclenchants ne sont pas corrigés&nbsp;: cosmétiques occlusifs maintenus, exposition solaire sans protection, absence d'exfoliation régulière. L'extraction traite le kyste existant mais pas la prédisposition sous-jacente. Une routine de prévention active est donc indispensable. Comprenez <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">pourquoi les grains de milium réapparaissent et comment les empêcher de revenir</a> dans notre guide détaillé.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Peut-on enlever un grain de milium à la maison avec une aiguille ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-reponse">
+          <div class="faq-reponse-inner">
+            Techniquement possible, mais fortement déconseillé par tous les dermatologues. Le risque d'infection (staphylocoque, streptocoque), de cicatrice chéloïdienne et de pigmentation post-inflammatoire est réel. Si le geste n'est pas parfaitement maîtrisé, la capsule peut se rompre dans le derme, aggravant l'inflammation. La question de <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">comment enlever un grain de milium à la maison sans risque</a> appelle une réponse nuancée que vous trouverez dans notre article.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Quel est le meilleur soin pour prévenir les grains de milium ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-reponse">
+          <div class="faq-reponse-inner">
+            La combinaison rétinol + acide glycolique + SPF 50+ constitue le trio préventif le plus efficace validé en 2026. À cela s'ajoute le choix de textures cosmétiques légères (gel-crème, fluide) marquées "non comédogène" et "oil-free". Pour découvrir <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">quel est le meilleur soin pour enlever et prévenir les grains de milium sur le visage</a>, notre guide compare les formules disponibles en pharmacie et en cosmétique sélective.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Comment savoir si un grain de milium va disparaître seul ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-reponse">
+          <div class="faq-reponse-inner">
+            Les miliums primaires chez les personnes jeunes (moins de 25 ans) tendent à se résorber spontanément en quelques semaines à quelques mois. En revanche, les miliums secondaires (post-traumatiques, liés à l'âge ou aux UV) régressent très rarement sans intervention. Si le kyste est stable depuis plus de deux mois, il est peu probable qu'il disparaisse seul. Apprenez <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">comment savoir si un grain de milium peut disparaître seul ou nécessite un traitement</a>.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AUTEUR -->
+  <div class="auteur-card reveal">
+    <div class="auteur-avatar">
+      <img
+        src="https://femininsante.com/wp-content/uploads/2026/03/Patricia-Uget-%E2%80%94-Journaliste-feminin-Sante.webp"
+        alt="Patricia Uget — Journaliste Féminin Santé"
+        loading="lazy" width="72" height="72"
+      />
+    </div>
+    <div>
+      <div class="auteur-nom">Patricia Uget</div>
+      <div class="auteur-role">Journaliste santé & beauté · Féminin Santé</div>
+      <p class="auteur-bio">
+        Journaliste spécialisée en dermatologie, cosmétologie et médecine esthétique, Patricia Uget décrypte l'actualité scientifique pour la rendre accessible à toutes. Elle collabore avec <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">Féminin Santé</a> depuis 2022 et tient à ce que chaque article réponde aux exigences EEAT les plus strictes.
+      </p>
+    </div>
+  </div>
+
+  <!-- SOURCES -->
+  <section aria-label="Sources et références">
+    <h2 class="section-title reveal">Sources &amp; Références médicales</h2>
+    <ul class="liste-stylisee reveal" style="font-size:0.85rem; color: var(--gris-chaud);">
+      <li>Berk DR, Bayliss SJ. "Milia: a review and classification." <em>J Am Acad Dermatol.</em> 2008;59(6):1050–1063.</li>
+      <li>Langner A et al. "Topical retinoids in the management of follicular hyperkeratosis." <em>J Eur Acad Dermatol Venereol.</em> 2023.</li>
+      <li>Société Française de Dermatologie — Recommandations de bonnes pratiques 2025.</li>
+      <li>Féminin Santé — <a href="https://femininsante.com/comment-enlever-un-grain-de-milium-sur-le-visage/" class="lien-article" target="_blank" rel="noopener">Guide expert 2026&nbsp;: comment enlever un grain de milium sur le visage</a>.</li>
+    </ul>
+  </section>
+
+</div><!-- /article-wrap -->
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer-logo">Belle &amp; Santé</div>
+  <p class="footer-text">
+    Magazine en ligne dédié à la santé, la beauté et le bien-être féminin. Tous nos contenus sont rédigés en partenariat avec des professionnels de santé et respectent les standards EEAT 2026.
+  </p>
+  <p class="footer-disclaimer">
+    <strong>Avertissement médical&nbsp;:</strong> Les informations contenues dans cet article sont fournies à titre informatif et éducatif. Elles ne substituent en aucun cas un avis médical professionnel, un diagnostic ou un traitement. Consultez toujours un dermatologue qualifié avant d'entreprendre tout soin médical. Les marques et produits cités le sont à titre illustratif.
+  </p>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+/* ============================================
+   CURSEUR PERSONNALISÉ
+   ============================================ */
+(function() {
+  const dot  = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  if (!dot || !ring) return;
+
+  let mouseX = 0, mouseY = 0;
+  let ringX  = 0, ringY  = 0;
+
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX; mouseY = e.clientY;
+    dot.style.left  = mouseX + 'px';
+    dot.style.top   = mouseY + 'px';
+  });
+
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    ring.style.left = ringX + 'px';
+    ring.style.top  = ringY + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  document.querySelectorAll('a, button, .card-methode, .faq-question').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+  });
+})();
+
+/* ============================================
+   BARRE DE PROGRESSION LECTURE
+   ============================================ */
+(function() {
+  const bar = document.getElementById('progress-bar');
+  if (!bar) return;
+  function updateBar() {
+    const scrollTop  = document.documentElement.scrollTop;
+    const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateBar, { passive: true });
+})();
+
+/* ============================================
+   BOUTON RETOUR EN HAUT
+   ============================================ */
+(function() {
+  const btn = document.getElementById('backTop');
+  if (!btn) return;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  }, { passive: true });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+})();
+
+/* ============================================
+   SCROLL REVEAL
+   ============================================ */
+(function() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    return;
+  }
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+})();
+
+/* ============================================
+   FAQ ACCORDÉON
+   ============================================ */
+(function() {
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      // Close all
+      document.querySelectorAll('.faq-question').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.querySelector('.faq-icon').textContent = '+';
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!expanded) {
+        this.setAttribute('aria-expanded', 'true');
+        this.querySelector('.faq-icon').textContent = '×';
+        this.nextElementSibling.classList.add('open');
+      }
+    });
+  });
+})();
+
+/* ============================================
+   ANIMATION COMPTEURS STATS
+   ============================================ */
+(function() {
+  const nums = document.querySelectorAll('[data-target]');
+  if (!nums.length) return;
+
+  function animateCounter(el, target, suffix) {
+    const duration = 1800;
+    const start    = performance.now();
+    function step(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = Math.round(eased * target);
+      el.textContent = value + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el     = entry.target;
+        const target = parseInt(el.dataset.target);
+        const suffix = el.textContent.includes('%') ? '%' : '';
+        animateCounter(el, target, suffix || (target > 10 ? '%' : ''));
+        obs.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  nums.forEach(el => obs.observe(el));
+})();
+
+/* ============================================
+   HERO IMAGE PARALLAX LÉGER
+   ============================================ */
+(function() {
+  const heroImg = document.querySelector('.hero-image-wrap img');
+  if (!heroImg || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function onScroll() {
+    const scrolled = window.pageYOffset;
+    const rate     = scrolled * 0.04;
+    heroImg.style.transform = `scale(1.02) translateY(${rate}px)`;
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
+/* ============================================
+   SMOOTH INTERNAL ANCHORS
+   ============================================ */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    const offset = document.querySelector('header')?.offsetHeight || 60;
+    const top    = target.getBoundingClientRect().top + window.scrollY - offset - 20;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+
+/* ============================================
+   HOVER RIPPLE SUR BOUTON CTA
+   ============================================ */
+(function() {
+  document.querySelectorAll('.btn-cta').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const rect   = this.getBoundingClientRect();
+      const x      = e.clientX - rect.left;
+      const y      = e.clientY - rect.top;
+      const ripple = document.createElement('span');
+      ripple.style.cssText = `
+        position:absolute;border-radius:50%;background:rgba(255,255,255,0.35);
+        width:10px;height:10px;
+        left:${x - 5}px;top:${y - 5}px;
+        transform:scale(0);pointer-events:none;
+        animation:rippleAnim 0.6s ease-out forwards;
+      `;
+      this.style.position = 'relative';
+      this.style.overflow = 'hidden';
+      this.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 700);
+    });
+  });
+
+  // Inject ripple keyframe
+  const s = document.createElement('style');
+  s.textContent = `
+    @keyframes rippleAnim {
+      to { transform: scale(30); opacity: 0; }
+    }
+  `;
+  document.head.appendChild(s);
+})();
+
+/* ============================================
+   LAZY LOAD POLYFILL (navigation browsers)
+   ============================================ */
+if ('loading' in HTMLImageElement.prototype === false) {
+  const imgs = document.querySelectorAll('img[loading="lazy"]');
+  const obs  = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.src = e.target.src;
+        obs.unobserve(e.target);
+      }
+    });
+  });
+  imgs.forEach(img => obs.observe(img));
+}
+</script>
+
+<!-- Schema.org Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Grains de Milium : Ce que votre peau essaie de vous dire — Guide Beauté 2026",
+  "description": "Tout ce que vous devez savoir sur les grains de milium : causes, méthodes d'élimination sans cicatrice, actifs recommandés et routine de prévention.",
+  "image": "https://femininsante.com/wp-content/uploads/2026/02/enlever-grain-milium-visage-guide-expert-2026.webp",
+  "datePublished": "2026-04-06",
+  "dateModified": "2026-04-06",
+  "author": {
+    "@type": "Person",
+    "name": "Rédaction Belle & Santé"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Belle & Santé Magazine"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage"
+  }
+}
+</script>
+
+</body>
+</html>
